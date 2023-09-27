@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Entering the Build phase..."
+      - mvn clean package
+  post_build:
+    commands:
+      - echo "Build completed successfully"
+artifacts:
+  files:
+    - target/Uber.jar
+  discard-paths: yes
+
